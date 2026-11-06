@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Articles & Publications | Hon. Simon Oshi</title>
+
+<meta name="description" content="Latest news, articles, publications and updates from Hon. Simon Oshi.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f8fa;
+    color: #172033;
+    line-height: 1.7;
+}
+
+header {
+    background: #101d35;
+    color: white;
+    padding: 22px 7%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.hero {
+    background: linear-gradient(120deg, #102447, #244c83);
+    color: white;
+    padding: 85px 7%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #dce7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 65px 25px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    color: #14294a;
+}
+
+.section-heading p {
+    color: #687386;
+}
+
+.controls {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.controls input,
+.controls select {
+    padding: 13px;
+    border: 1px solid #d9dee8;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+.controls input {
+    flex: 1;
+    min-width: 220px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,.06);
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #e5e9f0;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.date {
+    color: #5275a8;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 19px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #667085;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.tags {
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    background: #edf2f9;
+    color: #244c83;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin: 2px;
+}
+
+.read-more {
+    color: #24518c;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.loading,
+.empty {
+    text-align: center;
+    padding: 50px 15px;
+    color: #667085;
+}
+
+.article-detail {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.article-detail img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 25px 0;
+}
+
+.article-detail h1 {
+    font-size: clamp(27px, 4vw, 40px);
+    line-height: 1.3;
+    color: #14294a;
+}
+
+.article-body {
+    margin-top: 25px;
+    font-size: 17px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.article-body h2,
+.article-body h3 {
+    margin: 25px 0 12px;
+    color: #14294a;
+}
+
+.article-body p {
+    margin-bottom: 18px;
+}
+
+.article-body img {
+    max-width: 100%;
+}
+
+.article-body ul,
+.article-body ol {
+    margin: 15px 0 15px 25px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #24518c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background: #101d35;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 14px;
+}
+
+@media(max-width: 850px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 580px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .article-detail {
+        padding: 20px;
+    }
+
+    .nav a {
+        margin-left: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="logo">HON. SIMON OSHI</div>
+
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./index.html#about">About</a>
+            <a href="./articles.html">Publications</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <h1>Articles & Publications</h1>
+    <p>
+        Explore the latest news, thoughts, activities,
+        public engagements and publications of Hon. Simon Oshi.
+    </p>
+</section>
+
+<main class="container">
+
+    <div id="listing">
+
+        <div class="section-heading">
+            <h2>Latest Publications</h2>
+            <p>News, insights and updates.</p>
+        </div>
+
+        <div class="controls">
+            <input
+                type="search"
+                id="search"
+                placeholder="Search articles..."
+            >
+
+            <select id="category">
+                <option value="">All Categories</option>
+                <option>Politics</option>
+                <option>News</option>
+                <option>Opinion</option>
+                <option>Tutorial</option>
+                <option>Lifestyle</option>
+                <option>Technology</option>
+            </select>
+        </div>
+
+        <div id="articles" class="grid">
+            <div class="loading">Loading publications...</div>
+        </div>
+
+    </div>
+
+    <div id="detail" hidden></div>
+
+</main>
+
+<footer>
+    <p>© <span id="year"></span> Hon. Simon Oshi. All Rights Reserved.</p>
+    <p>Official Website</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+<script>
+const API =
+"https://api.github.com/repos/Hon-Simon-Oshi/Hon-Simon-Oshi/contents/content/posts?ref=main";
+
+const SITE_BASE = "/Hon-Simon-Oshi/";
+
+let allArticles = [];
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+function escapeHTML(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+    })[char]);
+}
+
+function imageURL(path) {
+    if (!path) return "";
+
+    if (/^https?:\/\//i.test(path)) {
+        return path;
+    }
+
+    return SITE_BASE +
+        path.replace(/^\/+/, "")
+        .split("/")
+        .map(encodeURIComponent)
+        .join("/");
+}
+
+function getSlug(filename) {
+    return filename.replace(/\.md$/i, "");
+}
+
+async function loadArticles() {
+
+    const container = document.getElementById("articles");
+
+    try {
+
+        const response = await fetch(API);
+
+        if (!response.ok) {
+            throw new Error("Unable to retrieve articles.");
+        }
+
+        const files = await response.json();
+
+        const markdownFiles = files.filter(file =>
+            file.type === "file" &&
+            file.name.toLowerCase().endsWith(".md")
+        );
+
+        const results = await Promise.all(
+            markdownFiles.map(async file => {
+
+                const res = await fetch(file.download_url);
+
+                if (!res.ok) return null;
+
+                const raw = await res.text();
+
+                const match = raw.match(
+                    /^---\s*\r?\n([\s\S]*?)\r?\n---\s*(?:\r?\n|$)([\s\S]*)$/
+                );
+
+                if (!match) return null;
+
+                const metadata = jsyaml.load(match[1]) || {};
+
+                if (metadata.draft === true) return null;
+
+                return {
+                    ...metadata,
+                    body: match[2],
+                    slug: getSlug(file.name)
+                };
+
+            })
+        );
+
+        allArticles = results
+            .filter(article => article && article.title)
+            .sort((a, b) =>
+                new Date(b.date) - new Date(a.date)
+            );
+
+        renderArticles();
+
+        const post = new URLSearchParams(
+            window.location.search
+        ).get("post");
+
+        if (post) {
+            showArticle(post);
+        }
+
+    } catch (error) {
+
+        container.innerHTML = `
+            <div class="empty">
+                <h3>Unable to load publications</h3>
+                <p>Please refresh the page and try again.</p>
+            </div>
+        `;
+
+        console.error(error);
+    }
+}
+
+function renderArticles() {
+
+    const search = document.getElementById("search")
+        .value.toLowerCase();
+
+    const category = document.getElementById("category")
+        .value.toLowerCase();
+
+    const filtered = allArticles.filter(article => {
+
+        const text = (
+            article.title + " " +
+            (article.description || "") + " " +
+            (article.tags || []).join(" ")
+        ).toLowerCase();
+
+        const tags = Array.isArray(article.tags)
+            ? article.tags.map(t => String(t).toLowerCase())
+            : [];
+
+        return text.includes(search) &&
+            (!category || tags.includes(category));
+
+    });
+
+    const container = document.getElementById("articles");
+
+    if (!filtered.length) {
+
+        container.innerHTML = `
+            <div class="empty">
+                <h3>No publications found</h3>
+                <p>Check back for new articles and updates.</p>
+            </div>
+        `;
+
+        return;
+    }
+
+    container.innerHTML = filtered.map(article => {
+
+        const tags = Array.isArray(article.tags)
+            ? article.tags
+            : [];
+
+        const image = imageURL(article.image);
+
+        return `
+            <article class="card">
+
+                ${image ? `
+                    <img
+                        src="${escapeHTML(image)}"
+                        alt="${escapeHTML(article.title)}"
+                        loading="lazy"
+                    >
+                ` : ""}
+
+                <div class="card-content">
+
+                    <div class="date">
+                        ${escapeHTML(article.date || "")}
+                    </div>
+
+                    <h3>${escapeHTML(article.title)}</h3>
+
+                    <p>
+                        ${escapeHTML(article.description || "")}
+                    </p>
+
+                    <div class="tags">
+                        ${tags.map(tag => `
+                            <span class="tag">
+                                ${escapeHTML(tag)}
+                            </span>
+                        `).join("")}
+                    </div>
+
+                    <a
+                        class="read-more"
+                        href="?post=${encodeURIComponent(article.slug)}"
+                    >
+                        Read Full Article →
+                    </a>
+
+                </div>
+            </article>
+        `;
+
+    }).join("");
+}
+
+function showArticle(slug) {
+
+    const article = allArticles.find(
+        item => item.slug === slug
+    );
+
+    if (!article) return;
+
+    document.getElementById("listing").hidden = true;
+
+    const detail = document.getElementById("detail");
+
+    detail.hidden = false;
+
+    const image = imageURL(article.image);
+
+    const tags = Array.isArray(article.tags)
+        ? article.tags
+        : [];
+
+    const html = marked.parse(article.body || "");
+
+    detail.innerHTML = `
+        <article class="article-detail">
+
+            <a class="back" href="articles.html">
+                ← Back to Publications
+            </a>
+
+            <div class="date">
+                ${escapeHTML(article.date || "")}
+            </div>
+
+            <h1>${escapeHTML(article.title)}</h1>
+
+            ${image ? `
+                <img
+                    src="${escapeHTML(image)}"
+                    alt="${escapeHTML(article.title)}"
+                >
+            ` : ""}
+
+            <p>${escapeHTML(article.description || "")}</p>
+
+            <div class="tags">
+                ${tags.map(tag => `
+                    <span class="tag">${escapeHTML(tag)}</span>
+                `).join("")}
+            </div>
+
+            <div class="article-body">
+                ${DOMPurify.sanitize(html)}
+            </div>
+
+        </article>
+    `;
+
+    document.title =
+        article.title + " | Hon. Simon Oshi";
+
+    window.scrollTo(0, 0);
+}
+
+document.getElementById("search")
+    .addEventListener("input", renderArticles);
+
+document.getElementById("category")
+    .addEventListener("change", renderArticles);
+
+loadArticles();
+</script>
+
+</body>
+</html>
