@@ -505,13 +505,14 @@ function renderArticles() {
         return `
             <article class="card">
 
-                ${image ? `
-                    <img
-                        src="${escapeHTML(image)}"
-                        alt="${escapeHTML(article.title)}"
-                        loading="lazy"
-                    >
-                ` : ""}
+               ${image ? `
+<img
+src="${escapeHTML(encodeURI(image.startsWith('/') ? image : '/' + image))}"
+alt="${escapeHTML(article.title)}"
+loading="lazy"
+onerror="this.style.display='none'"
+>
+` : ""}
 
                 <div class="card-content">
 
@@ -582,12 +583,13 @@ function showArticle(slug) {
 
             <h1>${escapeHTML(article.title)}</h1>
 
-            ${image ? `
-                <img
-                    src="${escapeHTML(image)}"
-                    alt="${escapeHTML(article.title)}"
-                >
-            ` : ""}
+           ${image ? `
+<img
+src="${escapeHTML(encodeURI(image.startsWith('/') ? image : '/' + image))}"
+alt="${escapeHTML(article.title)}"
+onerror="this.style.display='none'"
+>
+` : ""}
 
             <p>${escapeHTML(article.description || "")}</p>
 
