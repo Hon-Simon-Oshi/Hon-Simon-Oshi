@@ -2,13 +2,13 @@ media: media
 
 content:
   - name: posts
-    label: Posts
+    label: Blog Posts
     type: collection
     path: content/posts
     filename: "{year}-{month}-{day}-{primary}.md"
     format: yaml-frontmatter
     view:
-      fields: [title, date, tags]
+      fields: [title, date, tags, draft]
       primary: title
       sort: [date]
       default:
@@ -21,14 +21,14 @@ content:
         required: true
 
       - name: date
-        label: Date
+        label: Publish Date
         type: date
         required: true
 
       - name: description
-        label: Description / Excerpt
+        label: Excerpt
         type: text
-        description: Short summary shown on the blog listing page
+        description: Short summary for the blog listing page
 
       - name: image
         label: Cover Image
@@ -39,17 +39,19 @@ content:
         type: select
         options:
           multiple: true
+          creatable: true
           values:
             - News
             - Opinion
             - Tutorial
             - Lifestyle
             - Technology
+            - Politics
 
       - name: draft
         label: Draft
         type: boolean
-        default: false
+        default: true
 
       - name: body
         label: Content
