@@ -14,7 +14,7 @@ tags:
   - Politics
   - News
   - Opinion
-draft: true
+draft: false
 ---
 Hon. Simon Oshi: A New Generation of Leadership, Grassroots Empowerment and a Commitment to Building a Better Nigeria
 
