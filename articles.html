@@ -517,7 +517,7 @@ onerror="this.style.display='none'"
                 <div class="card-content">
 
                     <div class="date">
-                        ${escapeHTML(new Date((article.date || "") + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }))}
+                        ${escapeHTML(new Date(article.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }))}
                     </div>
 
                     <h3>${escapeHTML(article.title)}</h3>
@@ -578,7 +578,7 @@ function showArticle(slug) {
             </a>
 
             <div class="date">
-                ${escapeHTML(new Date((article.date || "") + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }))}
+                ${escapeHTML(new Date(article.date).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }))}
             </div>
 
             <h1>${escapeHTML(article.title)}</h1>
