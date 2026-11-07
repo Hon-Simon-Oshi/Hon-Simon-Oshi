@@ -507,7 +507,7 @@ function renderArticles() {
 
                ${image ? `
 <img
-src="${escapeHTML(encodeURI(image.startsWith('/') ? image : '/' + image))}"
+src="${escapeHTML(image.startsWith('/') ? image : '/' + image)}"
 alt="${escapeHTML(article.title)}"
 loading="lazy"
 onerror="this.style.display='none'"
