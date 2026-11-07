@@ -568,12 +568,13 @@ function showArticle(slug) {
         ? article.tags
         : [];
 
-    const html = marked.parse(article.body || "");
+    const html = marked.parse(article.body || "");                                                                        
 
     detail.innerHTML = `
         <article class="article-detail">
 
-            <a class="back" href="articles.html">
+            <a class="back" href="articles.html">                                                                    
+        
                 ← Back to Publications
             </a>
 
@@ -585,7 +586,7 @@ function showArticle(slug) {
 
            ${image ? `
 <img
-src="${escapeHTML(encodeURI(image.startsWith('/') ? image : '/' + image))}"
+src="${escapeHTML(image.startsWith('/') ? image : '/' + image)}"
 alt="${escapeHTML(article.title)}"
 onerror="this.style.display='none'"
 >
