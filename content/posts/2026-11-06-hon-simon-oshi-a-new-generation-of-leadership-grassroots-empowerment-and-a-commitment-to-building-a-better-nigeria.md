@@ -16,7 +16,7 @@ tags:
   - Opinion
 draft: false
 ---
-Hon. Simon Oshi: A New Generation of Leadership, Grassroots Empowerment and a Commitment to Building a Better Nigeria
+
 
 In a country where the future of national development largely depends on the opportunities created for its younger generation, individuals who dedicate their time, resources and influence to improving the lives of others deserve recognition and appreciation.
 
