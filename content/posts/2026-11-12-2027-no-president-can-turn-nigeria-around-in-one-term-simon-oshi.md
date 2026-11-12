@@ -1,5 +1,5 @@
 ---
-title: "2027: No President Can Turn Nigeria Around in One Term – Simon Oshi"
+title: "2027: No President Can Turn Nigeria Around in One Term – Simon Oshi."
 date: 2026-11-12
 description: Enugu-born politician and philanthropist Simon Oshi has weighed in
   on Nigeria’s 2027 presidential election, arguing that the country’s deeply
